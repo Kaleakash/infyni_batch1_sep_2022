@@ -1,6 +1,7 @@
 package com;
 
 import java.util.Stack;
+import java.util.Vector;
 
 public class StackDemo {
 
@@ -11,6 +12,9 @@ public class StackDemo {
 		ss.push(200);
 		ss.push(300);
 		ss.push(400);
+		Object abc[]= {1,2,3,4};
+		ss.copyInto(abc);
+		System.out.println(ss);
 		System.out.println("Size "+ss.size());
 		System.out.println(ss);
 		System.out.println("Last element "+ss.peek()); // this method display top most element 
