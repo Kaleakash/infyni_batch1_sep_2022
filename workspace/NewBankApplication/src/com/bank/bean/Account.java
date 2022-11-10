@@ -4,8 +4,10 @@ public class Account {
 private int accno;
 private String cname;
 private float amount;
+
 public Account() {
 	super();
+	// TODO Auto-generated constructor stub
 }
 public Account(int accno, String cname, float amount) {
 	super();
@@ -31,5 +33,7 @@ public float getAmount() {
 public void setAmount(float amount) {
 	this.amount = amount;
 }
+
+
 
 }
