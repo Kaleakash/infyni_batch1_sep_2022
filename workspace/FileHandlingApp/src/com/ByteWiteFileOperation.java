@@ -1,6 +1,7 @@
 package com;
 
 import java.io.DataInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
@@ -27,6 +28,13 @@ public class ByteWiteFileOperation {
 //		fis.close();
 		
 		//copy from one file to another file 
+//		File ff =new File("\"C:\\\\Users\\\\LENOVO\\\\OneDrive\\\\Desktop\\\\Java and SQ Trainng\\\\Batch 1\\\\Java Programs\\\\ArrayDemo.java\"");
+//		System.out.println(ff.getPath());
+//		System.out.println(ff.getAbsolutePath());
+//		System.out.println(ff.canRead());
+//		System.out.println(ff.canWrite());
+//		System.out.println(ff.canExecute());
+//		System.out.println(ff.length());
 		FileInputStream fis = new FileInputStream("C:\\Users\\LENOVO\\OneDrive\\Desktop\\Java and SQ Trainng\\Batch 1\\Java Programs\\ArrayDemo.java");
 		FileOutputStream fos = new FileOutputStream("demo.txt");
 		int ch;
