@@ -6,8 +6,11 @@ public class JdbcTest {
 	public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 		try {
+			// singleton : only one object must be created...
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		System.out.println("Driver loaded successfully");
+		// type 2, type 3 or type 4
+		//URL = jdbc:mysql://192.1.12.96:3306/mydb
 	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/infi_batch1", "root", "root@123");
 	System.out.println("Database connected");
 	Statement stmt = con.createStatement();
@@ -35,26 +38,29 @@ public class JdbcTest {
 //			}else {
 //				System.out.println("Record not present");
 //			}
+	
+	// retrieve query 
+	
 //	ResultSet rs = stmt.executeQuery("select * from emp");
 //	while(rs.next()) {
 //		System.out.println(" id is "+rs.getInt(1)+" name is "+rs.getString(2)+" salary is "+rs.getFloat(3));
 //	}
 
 	// insert query using prepared statement 
-//	PreparedStatement pstmt = con.prepareStatement("insert into emp values(?,?,?)");
-//	System.out.println("Enter the id");
-//	int id = sc.nextInt();
-//		pstmt.setInt(1, id);
-//	System.out.println("Enter the name");
-//	String name = sc.next();
-//		pstmt.setString(2, name);
-//	System.out.println("Enter the salary");
-//	float salary = sc.nextFloat();
-//		pstmt.setFloat(3, salary);
-//	int res = pstmt.executeUpdate();
-//	if(res>0) {
-//		System.out.println("Record inserted successfully...");
-//	}
+	PreparedStatement pstmt = con.prepareStatement("insert into emp values(?,?,?)");
+	System.out.println("Enter the id");
+	int id = sc.nextInt();
+		pstmt.setInt(1, id);
+	System.out.println("Enter the name");
+	String name = sc.next();
+		pstmt.setString(2, name);
+	System.out.println("Enter the salary");
+	float salary = sc.nextFloat();
+		pstmt.setFloat(3, salary);
+	int res = pstmt.executeUpdate();
+	if(res>0) {
+		System.out.println("Record inserted successfully...");
+	}
 	
 //	// delete query using prepared statement 
 //		PreparedStatement pstmt = con.prepareStatement("delete from emp where id =?");

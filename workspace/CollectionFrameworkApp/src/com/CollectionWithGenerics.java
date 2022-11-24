@@ -17,6 +17,7 @@ public class CollectionWithGenerics {
 //	Integer  i = (Integer)obj;		// down level type casting 
 //	int n = i.intValue();
 //	System.out.println(n);
+		
 	//  Collection Framework with generics 
 	List<Integer> ll = new ArrayList<Integer>();
 	List<Integer> ll1 = new ArrayList<Integer>();
